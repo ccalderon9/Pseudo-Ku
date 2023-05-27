@@ -3,4 +3,54 @@
    uuid = "20BD01E5-3757-43B5-A3F4-533349704569"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "269BC12B-9683-45EA-A238-F828001F01C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pseudo-Ku/SudokuCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "269BC12B-9683-45EA-A238-F828001F01C7 - 87822562e4d3595c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pseudo_Ku.SudokuCollectionViewCell.configure(with: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "Pseudo-Ku"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clarissa/Dev/Pseudo-Ku/Pseudo-Ku/SudokuCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "269BC12B-9683-45EA-A238-F828001F01C7 - e3741d818bca70f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; Swift.String in Pseudo_Ku.SudokuCollectionViewCell.configure(with: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "Pseudo-Ku"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clarissa/Dev/Pseudo-Ku/Pseudo-Ku/SudokuCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
