@@ -9,20 +9,20 @@ import Foundation
 
 class BoardViewModel {
     
-    var resultData: ResultData = ResultData()
+    private var resultData: ResultData = ResultData()
     
     init() {}
     
-    func fetchBoard(completion: @escaping(Result<ResultData, SudokuError>) -> Void) {
+    public func fetchBoard(completion: @escaping(Result<[[String]], SudokuError>) -> Void) {
         guard let path = Bundle.main.path(forResource: "Board", ofType: "json") else { return }
         let url = URL(filePath: path)
         
         do {
             let jsonData = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            if let board = try? decoder.decode(ResultData.self, from: jsonData) {
-                self.resultData = board
-                completion(.success(board))
+            if let resultData = try? decoder.decode(ResultData.self, from: jsonData) {
+                self.resultData = resultData
+                completion(.success(resultData.board))
             } else {
                 completion(.failure(.parsingError))
             }
@@ -31,11 +31,11 @@ class BoardViewModel {
         }
     }
     
-    func isValid() -> Bool {
+    public func isValid() -> Bool {
         return isRowsValid() && isColumnsValid() && isMiniSquaresValid()
     }
     
-    func isRowsValid() -> Bool {
+    private func isRowsValid() -> Bool {
         var hasDuplicates = false
         
         resultData.board.forEach { row in
@@ -49,7 +49,7 @@ class BoardViewModel {
         return !hasDuplicates
     }
     
-    func isColumnsValid() -> Bool {
+    private func isColumnsValid() -> Bool {
         var hasDuplicates = false
         
         for columnNumber in 0...8 {
@@ -63,7 +63,7 @@ class BoardViewModel {
         return !hasDuplicates
     }
 
-    func isMiniSquaresValid() -> Bool  {
+    private func isMiniSquaresValid() -> Bool  {
         var hasDuplicates = false
         
         var firstThreeColumns: [String] = []
